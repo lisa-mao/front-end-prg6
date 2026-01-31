@@ -1,13 +1,11 @@
 import {useEffect, useState} from 'react'
 import Flower from "./Flower.jsx";
 import { GrUpdate } from "react-icons/gr";
+import {useNavigate} from "react-router";
 
 function ShowFlower() {
     const [flowers, setFlowers] = useState([])
-
-    // const params = useParams()
-    /* const navigate = useNavigate()
- */
+    const navigate = useNavigate()
     const getFlowers = async () => {
 
         try {
@@ -53,7 +51,10 @@ function ShowFlower() {
         } catch (error) {
             console.error("error deleting", error)
         }
+    }
 
+    const goToEdit = (id) => {
+        navigate(`/edit/${id}`)
     }
 
     return (
@@ -61,6 +62,7 @@ function ShowFlower() {
             <div className="flex flex-col  justify-center items-center ">
 
                 <h1 className="font-bold text-2xl pb-2">Flower Entry</h1>
+                <p>The reason why it's called BloomNation is because its a kind of book where everyone can entry a flower into which makes it a nation, also with the theme of flowers i chose bloom because the collection blooms</p>
                 <button aria-label="Reload flowers" className="bg-[#FF9A9A] border-2 border-solid border-black p-1" onClick={getFlowers}><GrUpdate />
                 </button>
 
@@ -69,7 +71,9 @@ function ShowFlower() {
                     {flowers.map((flower) =>
                         <Flower key={flower.id}
                                 flower={flower}
-                                onDelete={deleteFlower}/>)
+                                onDelete={deleteFlower}
+                                onEdit={goToEdit}
+                        />)
                     }
                 </ul>
             </div>

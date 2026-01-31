@@ -16,6 +16,7 @@ function Navigation() {
                     </Link>
 
                     <Link className="bg-[#FF9A9A] border-2 border-solid border-[#945034] p-1 text-black" to={'/create'}>Create Entry</Link>
+
                 </div>
             </nav>
         </>

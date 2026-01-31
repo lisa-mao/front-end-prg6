@@ -1,6 +1,7 @@
 import {Link, Outlet} from "react-router";
 import Navigation from "./Navigation.jsx";
 import ShowFlower from "./ShowFlower.jsx";
+import Footer from "./Footer.jsx"
 
 function Layout() {
     return (
@@ -12,15 +13,11 @@ function Layout() {
             </header>
 
 
-            <main className="bg-[#FFDDAB]">
+            <main className="bg-[#FFDDAB] min-h-screen ">
                 <Outlet/>
 
-            </main>
-
-            <footer>
-
-            </footer>
-
+        </main>
+            <Footer/>
         </>)
 }
 
