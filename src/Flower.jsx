@@ -1,7 +1,7 @@
 import { MdEdit, MdDelete } from "react-icons/md";
 import { TbListDetails } from "react-icons/tb";
 
-function Flower({flower, onDelete, onEdit}) {
+function Flower({flower, onDelete, onEdit, onDetail}) {
 
 
     return (
@@ -16,8 +16,8 @@ function Flower({flower, onDelete, onEdit}) {
                         <button aria-label="Edit" className="bg-[#FF9A9A] border-2 border-solid border-[#945034] p-1 hover:cursor-pointer"
                                 onClick={() => onEdit(flower.id)}><MdEdit />
                         </button>
-                        <button aria-label="Details" className="bg-[#FF9A9A] border-2 border-solid border-[#945034] p-1 hover:cursor-pointer"
-                                onClick={() => onDelete(flower.id)}><TbListDetails />
+                        <button aria-label="DetailComponent" className="bg-[#FF9A9A] border-2 border-solid border-[#945034] p-1 hover:cursor-pointer"
+                                onClick={() => onDetail(flower.id)}><TbListDetails />
                         </button>
                         <button aria-label="Delete" className="bg-[#FF9A9A] border-2 border-solid border-[#945034] p-1 hover:cursor-pointer"
                                 onClick={() => onDelete(flower.id)}><MdDelete />

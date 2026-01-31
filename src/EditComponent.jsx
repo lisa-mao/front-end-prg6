@@ -72,7 +72,6 @@ function EditComponent() {
                     flowerName: formData.flowerName,
                     author: formData.author,
                     description: formData.description,
-                    body: "yes",
                 })
             })
 

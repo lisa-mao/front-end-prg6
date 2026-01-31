@@ -57,6 +57,10 @@ function ShowFlower() {
         navigate(`/edit/${id}`)
     }
 
+    const goToDetails = (id) => {
+        navigate(`/details/${id}`)
+    }
+
     return (
         <>
             <div className="flex flex-col  justify-center items-center ">
@@ -73,6 +77,7 @@ function ShowFlower() {
                                 flower={flower}
                                 onDelete={deleteFlower}
                                 onEdit={goToEdit}
+                                onDetail={goToDetails}
                         />)
                     }
                 </ul>

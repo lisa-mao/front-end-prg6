@@ -1,10 +1,12 @@
 import './index.css'
-import {createBrowserRouter, RouterProvider} from "react-router";
+import {createBrowserRouter, Route, RouterProvider} from "react-router";
 import Layout from "./layout.jsx";
 
 import ShowFlower from "./ShowFlower.jsx";
 import FormComponent from "./FormComponent.jsx";
 import EditComponent from "./EditComponent.jsx";
+import DetailComponent from "./DetailComponent.jsx";
+
 
 
 const router = createBrowserRouter([
@@ -22,6 +24,10 @@ const router = createBrowserRouter([
             {
                 path: `/edit/:id`,
                 element: <EditComponent/>,
+            },
+            {
+                path: `/details/:id`,
+                element: <DetailComponent/>,
             },
 
         ],
