@@ -1,5 +1,5 @@
 import './index.css'
-import {createBrowserRouter, Route, RouterProvider} from "react-router";
+import {createBrowserRouter, Link, Route, RouterProvider} from "react-router";
 import Layout from "./layout.jsx";
 
 import ShowFlower from "./ShowFlower.jsx";
@@ -30,6 +30,17 @@ const router = createBrowserRouter([
                 element: <DetailComponent/>,
             },
 
+            {
+                path: "*",
+                element: (
+                    <div className="flex flex-col items-center pt-20">
+                        <h1 className="text-4xl font-bold">404</h1>
+                        <p className="text-xl">Page doesn't exist!!!!!!!!!!.</p>
+                        <Link to="/" className="mt-4 text-amber-800 underline">GO BACK
+                            </Link>
+                    </div>
+                )
+            }
         ],
     },
 ]);
