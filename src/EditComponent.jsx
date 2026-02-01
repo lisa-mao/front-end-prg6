@@ -8,6 +8,7 @@ function EditComponent() {
     const params = useParams()
     const id = params.id
 
+    //empty object
     const [formData, setFormData] = useState({
         author: "",
         flowerName: "",
@@ -85,7 +86,7 @@ function EditComponent() {
     return (
         <form onSubmit={handleSubmit}>
             <div className="flex flex-col gap-3 justify-center items-center pt-40">
-                <h1 className="font-medium text-2xl">Create Entry</h1>
+                <h1 className="font-medium text-2xl">Edit {formData.flowerName}</h1>
                 <div
                     className=" flex flex-col gap-3 justify-center items-center border-6 border-solid border-[#945034] max-w-fit max-h-fit p-3">
                     <div className="flex flex-row gap-2">

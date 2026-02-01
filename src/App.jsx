@@ -35,7 +35,7 @@ const router = createBrowserRouter([
                 element: (
                     <div className="flex flex-col items-center pt-20">
                         <h1 className="text-4xl font-bold">404</h1>
-                        <p className="text-xl">Page doesn't exist!!!!!!!!!!.</p>
+                        <p className="text-xl">Page doesn't exist.</p>
                         <Link to="/" className="mt-4 text-amber-800 underline">GO BACK
                             </Link>
                     </div>
